@@ -1,0 +1,6 @@
+.user.yml
+logs/
+target/
+.idea/
+.DS_Store
+venv/
