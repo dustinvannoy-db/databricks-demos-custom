@@ -23,6 +23,6 @@ print(json.dumps(body))
 
 payload = json.dumps(body)
 resp = requests.post(base_uri, auth=auth, headers=headers, data=payload)
-if resp >= 400:
+if resp.status_code >= 400:
     raise ValueError(f"Response indicates error - Status was {resp}, message: {resp.text}")
 print(resp.text)
