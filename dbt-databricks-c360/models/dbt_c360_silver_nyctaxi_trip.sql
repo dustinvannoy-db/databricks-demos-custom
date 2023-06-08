@@ -1,5 +1,5 @@
 {{
- config(materialized = 'table', file_format = 'delta')
+ config(materialized = 'table', file_format = 'delta', persist_docs={"relation": true, "columns": true})
 }}
 
 -- notes: user data cleaned and anonymized for analysis -- 
