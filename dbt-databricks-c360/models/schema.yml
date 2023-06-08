@@ -14,6 +14,7 @@ models:
   - name: dbt_c360_silver_orders
     columns:
       - name: order_id
+      - name: amount
         tests:
           - not_null
       - name: user_id
@@ -29,7 +30,7 @@ models:
       - name: pickup_timestamp
         description: Data with time that trip pickup occurred (UTC).
 
-  - name: dbt_c360_tmp_vw_nyctaxi_trip
+  - name: dbt_c360_vw_nyctaxi_trip
     columns:
       - name: source
         description: Column indicating source of the data
