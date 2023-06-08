@@ -4,8 +4,8 @@ dbutils.widgets.dropdown("reset_all_data", "false", ["true", "false"], "Reset al
 # COMMAND ----------
 
 reset_all_data = dbutils.widgets.get("reset_all_data") == "true"
-raw_data_location = "dbdemos/dbt-retail"
-folder = "/dbdemos/dbt-retail"
+raw_data_location = "dbdemos/dbt-retail-dv"
+folder = "/dbdemos/dbt-retail-dv"
 
 #Return true if the folder is empty or does not exists
 def is_folder_empty(folder):

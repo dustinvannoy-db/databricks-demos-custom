@@ -21,7 +21,18 @@ models:
           - relationships:
               to: ref('dbt_c360_silver_users')
               field: user_id
-              
+
+  - name: dbt_c360_silver_nyctaxi_trip
+    columns:
+      - name: pickup_date
+        description: Date without time that trip pickup occurred (UTC).
+      - name: pickup_timestamp
+        description: Data with time that trip pickup occurred (UTC).
+
+  - name: dbt_c360_tmp_vw_nyctaxi_trip
+    columns:
+      - name: source
+        description: Column indicating source of the data
               
               
               
